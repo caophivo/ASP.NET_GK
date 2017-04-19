@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineShop.BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace OnlineShop.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var listProduct = ProductBUS.List();
+            return View(listProduct);
         }
 
         public ActionResult About()
