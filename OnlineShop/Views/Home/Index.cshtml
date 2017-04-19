@@ -4,6 +4,15 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
+<div class="banner-agile">
+    <div class="container">
+        <h2>WELCOME TO</h2>
+        <h3>FASHION <span>CLUB</span></h3>
+        <p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
+        <a href="about.html">Read More</a>
+    </div>
+</div>
+
 <div class="top-products">
     <div class="container">
         <h3>Top Products</h3>
@@ -21,7 +30,7 @@
     @foreach (var item in Model)
     {
         <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
-            <a href="single.html">
+            <a href="~/Product/Details/@item.MaSanPham">
                 <div class="product-img">
                     <img src="~/images/@item.HinhUrl" alt="" />
                     <div class="p-mask">
