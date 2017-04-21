@@ -66,23 +66,20 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Product/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var sp = ProductBUS.ProductDetail(id);
+            return View(sp);
         }
 
         // POST: Admin/Product/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, SanPham sp)
         {
-            try
+            // TODO: Add update logic here
+            using (var db = new ASP_OnlineShopConnectionDB())
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2 WHERE MaSanPham=@3", sp.TenSanPham, sp.GiaBan, sp.SoLuong, id);
             }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/Product/Delete/5
