@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ASP_OnlineShopConnection;
+using OnlineShop.Areas.Admin.BUS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,8 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Product
         public ActionResult Index()
         {
-            return View();
+            var listProduct = ProductBUS.List();
+            return View(listProduct);
         }
 
         // GET: Admin/Product/Details/5
@@ -28,12 +31,30 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         // POST: Admin/Product/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(SanPham sp)
         {
             try
             {
-                // TODO: Add insert logic here
+                // TODO: Add update logic here
+                using (var db = new ASP_OnlineShopConnectionDB())
+                {
 
+                    if (HttpContext.Request.Files.Count > 0)
+                    {
+                        var hpf = HttpContext.Request.Files[0];
+                        if (hpf.ContentLength > 0)
+                        {
+                            string fileName = Guid.NewGuid().ToString();
+                            string nameImage = fileName + ".jpg";
+                            string fullPathWithFileName = "/Images/" + nameImage;
+                            hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                            sp.HinhUrl = nameImage;
+                        }
+                    }
+
+                    db.Insert(sp);
+                    //db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2 WHERE MaSanPham=@3", sp.TenSanPham, sp.GiaBan, sp.SoLuong, id);
+                }
                 return RedirectToAction("Index");
             }
             catch
