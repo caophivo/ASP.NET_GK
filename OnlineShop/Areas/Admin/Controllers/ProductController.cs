@@ -77,7 +77,7 @@ namespace OnlineShop.Areas.Admin.Controllers
             // TODO: Add update logic here
             using (var db = new ASP_OnlineShopConnectionDB())
             {
-                db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2 WHERE MaSanPham=@3", sp.TenSanPham, sp.GiaBan, sp.SoLuong, id);
+                db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2, NgayNhap=@3, HinhUrl=@4, MoTa=@5, DaXoa=@6 WHERE MaSanPham=@7", sp.TenSanPham, sp.GiaBan, sp.SoLuong, sp.NgayNhap, sp.HinhUrl, sp.MoTa, sp.DaXoa, id);
             }
             return RedirectToAction("Index");
         }
@@ -85,7 +85,8 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var sp = ProductBUS.ProductDetail(id);
+            return View(sp);
         }
 
         // POST: Admin/Product/Delete/5
@@ -95,7 +96,11 @@ namespace OnlineShop.Areas.Admin.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                using (var db = new ASP_OnlineShopConnectionDB())
+                {
+                    //db.Delete("SanPham", id.ToString(), sp);
+                    db.Update<SanPham>("SET DaXoa=1 WHERE MaSanPham=@0", id);
+                }
                 return RedirectToAction("Index");
             }
             catch
