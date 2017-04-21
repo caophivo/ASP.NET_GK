@@ -196,6 +196,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\BUS\ProductBUS.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -217,6 +220,66 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\css\basictable.css" />
+    <Content Include="Areas\Admin\css\bootstrap.min.css" />
+    <Content Include="Areas\Admin\css\font-awesome.css" />
+    <Content Include="Areas\Admin\css\icon-font.min.css" />
+    <Content Include="Areas\Admin\css\jqcandlestick.css" />
+    <Content Include="Areas\Admin\css\jquery-ui.css" />
+    <Content Include="Areas\Admin\css\lightbox.css" />
+    <Content Include="Areas\Admin\css\monthly.css" />
+    <Content Include="Areas\Admin\css\morris.css" />
+    <Content Include="Areas\Admin\css\style.css" />
+    <Content Include="Areas\Admin\css\table-style.css" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\images\close.png" />
+    <Content Include="Areas\Admin\images\closew.gif" />
+    <Content Include="Areas\Admin\images\cross.png" />
+    <Content Include="Areas\Admin\images\g1.jpg" />
+    <Content Include="Areas\Admin\images\g2.jpg" />
+    <Content Include="Areas\Admin\images\g3.jpg" />
+    <Content Include="Areas\Admin\images\g4.jpg" />
+    <Content Include="Areas\Admin\images\g5.jpg" />
+    <Content Include="Areas\Admin\images\g6.jpg" />
+    <Content Include="Areas\Admin\images\g7.jpg" />
+    <Content Include="Areas\Admin\images\g8.jpg" />
+    <Content Include="Areas\Admin\images\g9.jpg" />
+    <Content Include="Areas\Admin\images\grid.png" />
+    <Content Include="Areas\Admin\images\icon_sprite.png" />
+    <Content Include="Areas\Admin\images\in.jpg" />
+    <Content Include="Areas\Admin\images\in1.jpg" />
+    <Content Include="Areas\Admin\images\in10.jpg" />
+    <Content Include="Areas\Admin\images\in11.jpg" />
+    <Content Include="Areas\Admin\images\in2.jpg" />
+    <Content Include="Areas\Admin\images\in3.jpg" />
+    <Content Include="Areas\Admin\images\in4.jpg" />
+    <Content Include="Areas\Admin\images\in5.jpg" />
+    <Content Include="Areas\Admin\images\in6.jpg" />
+    <Content Include="Areas\Admin\images\in7.jpg" />
+    <Content Include="Areas\Admin\images\in8.jpg" />
+    <Content Include="Areas\Admin\images\in9.jpg" />
+    <Content Include="Areas\Admin\images\leftw.gif" />
+    <Content Include="Areas\Admin\images\next.png" />
+    <Content Include="Areas\Admin\images\phon.png" />
+    <Content Include="Areas\Admin\images\prev.png" />
+    <Content Include="Areas\Admin\images\rightw.gif" />
+    <Content Include="Areas\Admin\images\right_arrow.png" />
+    <Content Include="Areas\Admin\images\search.png" />
+    <Content Include="Areas\Admin\images\smile.png" />
+    <Content Include="Areas\Admin\images\tick.png" />
+    <Content Include="Areas\Admin\images\tick1.png" />
+    <Content Include="Areas\Admin\js\bootstrap.min.js" />
+    <Content Include="Areas\Admin\js\Chart.js" />
+    <Content Include="Areas\Admin\js\jquery-2.1.4.min.js" />
+    <Content Include="Areas\Admin\js\jquery-ui.js" />
+    <Content Include="Areas\Admin\js\jquery.basictable.min.js" />
+    <Content Include="Areas\Admin\js\jquery.jqcandlestick.min.js" />
+    <Content Include="Areas\Admin\js\jquery.nicescroll.js" />
+    <Content Include="Areas\Admin\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Areas\Admin\js\monthly.js" />
+    <Content Include="Areas\Admin\js\morris.js" />
+    <Content Include="Areas\Admin\js\raphael-min.js" />
+    <Content Include="Areas\Admin\js\scripts.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -491,6 +554,18 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="images\Product00f1a7ad-1ab8-4f5d-8050-c903c7fd1557" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -543,9 +618,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
