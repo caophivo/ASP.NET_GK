@@ -1,4 +1,5 @@
 ﻿using ASP_OnlineShopConnection;
+using OnlineShop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,12 @@ namespace OnlineShop.BUS
             return db.SingleOrDefault<SanPham>("select * from SanPham where MaSanPham = @0", id);
         }
 
+        public static IEnumerable<HinhAnh> listHinhAnh(int id)
+        {
+            using (var db = new ASP_OnlineShopConnectionDB())
+            {
+                return db.Query<HinhAnh>("Select * from HinhAnh where MaSanPham = @0", id);
+            }
+        }
     }
 }

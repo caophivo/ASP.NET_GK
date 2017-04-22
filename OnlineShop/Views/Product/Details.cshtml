@@ -1,4 +1,5 @@
-﻿@model ASP_OnlineShopConnection.SanPham
+﻿@model OnlineShop.ViewModels.ProductInfo
+
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -32,16 +33,14 @@
                             </li>
                             <li data-thumb="~/images/s3.jpg">
                                 <div class="thumb-image"> <img src="~/images/s3.jpg" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                            </li>*@ 
-                            <li data-thumb="~/images/@Model.HinhUrl">
-                                <div class="thumb-image detail_images"> <img src="~/images/@Model.HinhUrl" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                            </li>
-                            <li data-thumb="~/images/@Model.HinhUrl">
-                                <div class="thumb-image"> <img src="~/images/@Model.HinhUrl" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                            </li>
-                            <li data-thumb="~/images/@Model.HinhUrl">
-                                <div class="thumb-image"> <img src="~/images/@Model.HinhUrl" data-imagezoom="true" class="img-responsive" alt=""> </div>
-                            </li>
+                            </li>*@
+                            @foreach (var item in Model.arrHinhAnh.Take(3))
+                            {
+                                <li data-thumb="../../images/@item.TenHinhAnh">
+                                    <div class="thumb-image detail_images"> <img src="../../images/@item.TenHinhAnh" data-imagezoom="true" class="img-responsive" alt=""> </div>
+                                </li>
+                            }
+                            
                         </ul>
                     </div>
                 </div>
@@ -61,8 +60,8 @@
                     </div>
                     <div class="single-price">
                         <ul>
-                            <li>@Model.GiaBan</li>
-                            <li><del>@Model.GiaBan - 500</del></li>
+                            <li>@Model.sanPham.TenSanPham</li>
+                            <li><del>@Model.sanPham.GiaBan - 500</del></li>
                             <li><span class="w3off">10% OFF</span></li>
                             <li>Ends on: Oct,15th</li>
                             <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i> Coupon</a></li>

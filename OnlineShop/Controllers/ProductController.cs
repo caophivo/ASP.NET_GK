@@ -1,4 +1,5 @@
 ﻿using OnlineShop.BUS;
+using OnlineShop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,12 @@ namespace OnlineShop.Controllers
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
-            var detail = ProductBUS.ProductDetail(id);
-            return View(detail);
+            var info = new ProductInfo()
+            {
+                sanPham = ProductBUS.ProductDetail(id),
+                arrHinhAnh = ProductBUS.listHinhAnh(id)
+            };
+            return View(info);
         }
 
         // GET: Product/Create
