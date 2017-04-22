@@ -14,5 +14,10 @@ namespace OnlineShop.Controllers
         {
             return View(ProductTypeBUS.ListProductType());
         }
+
+        public ActionResult Producer()
+        {
+            return View(ProductTypeBUS.ListProducer());
+        }
     }
 }

@@ -60,12 +60,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav ">
-                            <li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>
+                            <li class=" active"><a href="index.html" class="hyper "><span>Trang chủ</span></a></li>
                             <li class="dropdown ">
                                 <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Loại sản phẩm<b class="caret"></b></span></a>
                                 <ul class="dropdown-menu multi">
                                     <div class="row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-4">
                                             @*<ul class="multi-column-dropdown">
 
                                                 <li><a href="women.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Women's Clothing</a></li>
@@ -94,20 +94,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> Personal Care <b class="caret"></b></span></a>
+                                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown"><span> Hãng sản xuất <b class="caret"></b></span></a>
                                 <ul class="dropdown-menu multi multi1">
                                     <div class="row">
                                         <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
+                                            @*<ul class="multi-column-dropdown">
                                                 <li><a href="jewellery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Jewellery </a></li>
                                                 <li><a href="watches.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Watches</a></li>
                                                 <li><a href="cosmetics.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
                                                 <li><a href="deos.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Perfumes</a></li>
 
-                                            </ul>
-
+                                            </ul>*@
+                                            @Html.Action("Producer", "Menu")
                                         </div>
-                                        <div class="col-sm-4">
+                                        @*<div class="col-sm-4">
 
                                             <ul class="multi-column-dropdown">
                                                 <li><a href="haircare.html"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                                             </ul>
 
-                                        </div>
+                                        </div>*@
                                         <div class="col-sm-4 w3l">
                                             <a href="jewellery.html"><img src="~/images/menu2.jpg" class="img-responsive" alt=""></a>
                                         </div>

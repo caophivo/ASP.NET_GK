@@ -623,6 +623,7 @@
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Shared\_ProductTypeMenu.cshtml" />
     <Content Include="Views\Menu\ProductType.cshtml" />
+    <Content Include="Views\Menu\Producer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
