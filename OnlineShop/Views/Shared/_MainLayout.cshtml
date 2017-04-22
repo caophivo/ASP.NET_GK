@@ -62,21 +62,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <ul class="nav navbar-nav ">
                             <li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>
                             <li class="dropdown ">
-                                <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Clothing<b class="caret"></b></span></a>
+                                <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown"><span>Loại sản phẩm<b class="caret"></b></span></a>
                                 <ul class="dropdown-menu multi">
                                     <div class="row">
-                                        <div class="col-sm-4">
-                                            <ul class="multi-column-dropdown">
+                                        <div class="col-sm-8">
+                                            @*<ul class="multi-column-dropdown">
 
                                                 <li><a href="women.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Women's Clothing</a></li>
                                                 <li><a href="men.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's Clothing</a></li>
                                                 <li><a href="kids.html"> <i class="fa fa-angle-right" aria-hidden="true"></i>Kid's Wear</a></li>
                                                 <li><a href="party.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Party Wear</a></li>
 
-                                            </ul>
-
+                                            </ul>*@
+                                            @*@Html.Partial("_ProductTypeMenu", OnlineShop.BUS.ProductTypeBUS.ListProductType())*@
+                                            @Html.Action("ProductType", "Menu")
                                         </div>
-                                        <div class="col-sm-4">
+                                        @*<div class="col-sm-4">
                                             <ul class="multi-column-dropdown">
                                                 <li><a href="casuals.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Casuals</a></li>
                                                 <li><a href="night.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Night Wear</a></li>
@@ -84,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <li><a href="inner.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Inner Wear</a></li>
 
                                             </ul>
-                                        </div>
+                                        </div>*@
                                         <div class="col-sm-4 w3l">
                                             <a href="women.html"><img src="~/images/menu1.jpg" class="img-responsive" alt=""></a>
                                         </div>
