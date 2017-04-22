@@ -11,10 +11,10 @@ namespace OnlineShop.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            var listProduct = ProductBUS.List();
-            return View(listProduct);
+            //var listProduct = ProductBUS.ListProduct(page, 3);
+            return View();
         }
 
         // GET: Product/Details/5

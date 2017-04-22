@@ -1,5 +1,6 @@
 ﻿using ASP_OnlineShopConnection;
 using OnlineShop.ViewModels;
+using PetaPoco;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,12 @@ namespace OnlineShop.BUS
         {
             var db = new ASP_OnlineShopConnectionDB();
             return db.Query<SanPham>("SELECT * FROM SanPham WHERE DaXoa=0");
+        }
+
+        public static Page<SanPham> ListProduct(int pageNumber, int itemPerPage)
+        {
+            var db = new ASP_OnlineShopConnectionDB();
+            return db.Page<SanPham>(pageNumber, itemPerPage, "SELECT * FROM SanPham");
         }
 
         public static SanPham ProductDetail(int id)
