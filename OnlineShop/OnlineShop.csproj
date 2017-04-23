@@ -331,6 +331,16 @@
     <Content Include="images\banner\banner3.png" />
     <Content Include="images\banner\banner4.png" />
     <Content Include="images\banner\banner5.png" />
+    <Content Include="images\banner\bannerProduct1.jpg" />
+    <Content Include="images\banner\bannerProduct1.png" />
+    <Content Include="images\banner\bannerProduct2.jpg" />
+    <Content Include="images\banner\bannerProduct2.png" />
+    <Content Include="images\banner\bannerProduct3.jpg" />
+    <Content Include="images\banner\bannerProduct3.png" />
+    <Content Include="images\banner\bannerProduct4.jpg" />
+    <Content Include="images\banner\bannerProduct4.png" />
+    <Content Include="images\banner\bannerProduct5.jpg" />
+    <Content Include="images\banner\bannerProduct5.png" />
     <Content Include="images\bb1.jpg" />
     <Content Include="images\bb2.jpg" />
     <Content Include="images\bb3.jpg" />
