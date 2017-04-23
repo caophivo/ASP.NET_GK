@@ -211,12 +211,12 @@ button.w3view-cart:focus{
 
 /*--banner--*/
 .banner-agile{
-	background:url(../images/banner2.jpg) no-repeat 0px 0px;
+    background:url(../images/20_04_2017_08_01_06_game-viettel-4g-800-300.png) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:580px;
 }
 .sub-banner{
-	background:url(../images/banner2.jpg) no-repeat 0px 0px;
+    background:url(../images/20_04_2017_08_01_06_game-viettel-4g-800-300.png) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:280px;
 }
@@ -3152,7 +3152,7 @@ p.w3-agile{
 		width: 81%;
 	}
 	.banner-agile {
-		background: url(../images/banner2.jpg) no-repeat -50px 0px;
+        background:url(../images/20_04_2017_08_01_06_game-viettel-4g-800-300.png) no-repeat 0px 0px;
 		background-size: cover;
 	}
 }

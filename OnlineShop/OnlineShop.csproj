@@ -308,6 +308,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\20_04_2017_08_01_06_game-viettel-4g-800-300.png" />
+    <Content Include="images\20_04_2017_09_44_14_Galaxy-S8-Preoder-3-Fix-2-800-300.gif" />
     <Content Include="images\4.png" />
     <Content Include="images\46.jpg" />
     <Content Include="images\5.png" />
@@ -324,6 +326,11 @@
     <Content Include="images\apple-macbook-12-mmgl2-core-m-11g-8gb-256gb-macos-400-400x400.png" />
     <Content Include="images\asus-e402sa-wx251t-400-400x400.png" />
     <Content Include="images\banner2.jpg" />
+    <Content Include="images\banner\banner1.gif" />
+    <Content Include="images\banner\banner2.png" />
+    <Content Include="images\banner\banner3.png" />
+    <Content Include="images\banner\banner4.png" />
+    <Content Include="images\banner\banner5.png" />
     <Content Include="images\bb1.jpg" />
     <Content Include="images\bb2.jpg" />
     <Content Include="images\bb3.jpg" />
