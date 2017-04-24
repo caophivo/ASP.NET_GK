@@ -26,12 +26,16 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Product/Create
         public ActionResult Create()
         {
+            ViewBag.MaLoaiSanPham = new SelectList(ProductBUS.GetListCategogy(), "MaLoaiSanPham", "TenLoaiSanPham");
+            ViewBag.MaNhaCungCap = new SelectList(ProductBUS.GetListSupplier(), "MaNhaCungCap", "TenNhaCungCap");
+            ViewBag.MaNhaSanXuat = new SelectList(ProductBUS.GetListManufacturer(), "MaNhaSanXuat", "TenNhaSanXuat");
             return View();
         }
 
-        // POST: Admin/Product/Create
+        //POST: Admin/Product/Create
         [HttpPost]
-        public ActionResult Create(SanPham sp)
+        [ValidateInput(false)]
+        public ActionResult Create(SanPham sp, HinhAnh ha)
         {
             try
             {
@@ -39,29 +43,54 @@ namespace OnlineShop.Areas.Admin.Controllers
                 using (var db = new ASP_OnlineShopConnectionDB())
                 {
 
-                    if (HttpContext.Request.Files.Count > 0)
+                if (HttpContext.Request.Files.Count > 0)
+                {
+                    if(HttpContext.Request.Files.Count != 3)
                     {
-                        var hpf = HttpContext.Request.Files[0];
-                        if (hpf.ContentLength > 0)
-                        {
-                            string fileName = Guid.NewGuid().ToString();
-                            string nameImage = fileName + ".jpg";
-                            string fullPathWithFileName = "/Images/" + nameImage;
-                            hpf.SaveAs(Server.MapPath(fullPathWithFileName));
-                            sp.HinhUrl = nameImage;
+                           return Content("<script language='javascript' type='text/javascript'>alert('Vui lòng chọn 3 hình sp!');</script>");
+                     }
+                    else
+                    {
+                            var hpf = HttpContext.Request.Files[0];
+                            if (hpf.ContentLength > 0)
+                            {
+                                string fileName = Guid.NewGuid().ToString();
+                                string nameImage = fileName + ".jpg";
+                                string fullPathWithFileName = "/images/product/" + nameImage;
+                                hpf.SaveAs(Server.MapPath(fullPathWithFileName));
+                                sp.HinhUrl = nameImage;
+                            }
+                            db.Insert(sp);
+                            var query = db.Query<SanPham>("SELECT * FROM SanPham ORDER BY MaSanPham DESC");
+                            var id = query.First().MaSanPham;
+                            for (int i = 0; i < 3; i++)
+                            {
+                                var hpf2 = HttpContext.Request.Files[i];
+                                if (hpf2.ContentLength > 0)
+                                {
+                                    string fileName = Guid.NewGuid().ToString();
+                                    string nameImage = fileName + ".jpg";
+                                    string fullPathWithFileName = "/images/products/" + nameImage;
+                                    hpf2.SaveAs(Server.MapPath(fullPathWithFileName));
+                                    ha.TenHinhAnh = nameImage;
+                                    ha.MaSanPham = id;
+                                    db.Insert(ha);
+                                }
+                            }
                         }
-                    }
-
-                    db.Insert(sp);
-                    //db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2 WHERE MaSanPham=@3", sp.TenSanPham, sp.GiaBan, sp.SoLuong, id);
                 }
+
+                //db.Update<SanPham>("SET TenSanPham=@0, GiaBan=@1, SoLuong=@2 WHERE MaSanPham=@3", sp.TenSanPham, sp.GiaBan, sp.SoLuong, id);
+            }
+                //Content("<script language='javascript' type='text/javascript'>alert('Thêm thành công!');</script>");
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
+        catch
+        {
+                //Content("<script language='javascript' type='text/javascript'>alert('Xảy ra lỗi!');</script>");
+                return View(); //đây
+        }
+}
 
         // GET: Admin/Product/Edit/5
         public ActionResult Edit(int id)
