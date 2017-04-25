@@ -43,7 +43,7 @@
             @*@Html.LabelFor(model => model.TenSanPham, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Tên sản phẩm</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.TenSanPham, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.TenSanPham, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.TenSanPham, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -52,7 +52,7 @@
             @*@Html.LabelFor(model => model.GiaBan, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Giá bán</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.GiaBan, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.GiaBan, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.GiaBan, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -61,7 +61,7 @@
             @*@Html.LabelFor(model => model.SoLuong, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Số lượng</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -70,7 +70,7 @@
             @*@Html.LabelFor(model => model.LuotBinhChon, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Lượt bình chọn</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LuotBinhChon, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.LuotBinhChon, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.LuotBinhChon, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -79,7 +79,7 @@
             @*@Html.LabelFor(model => model.LuotBinhLuan, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Lượt bình luận</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LuotBinhLuan, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.LuotBinhLuan, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.LuotBinhLuan, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -88,7 +88,7 @@
             @*@Html.LabelFor(model => model.LuotXem, htmlAttributes: new { @class = "control-label col-md-2" })*@
             <label class="control-label col-md-2">Lượt xem</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LuotXem, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.LuotXem, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                 @Html.ValidationMessageFor(model => model.LuotXem, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -107,7 +107,7 @@
             <label class="control-label col-md-2">Hình ảnh</label>
             <div class="col-md-10">
                 @*@Html.EditorFor(model => model.HinhUrl, new { htmlAttributes = new { @class = "form-control" } })*@
-                <input name="imgProduct" type="file" multiple="multiple" size="3" max="3" min="3" />
+                <input name="imgProduct" type="file" multiple="multiple" size="3" max="3" min="3" required="required" />
                 @Html.ValidationMessageFor(model => model.HinhUrl, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -118,7 +118,7 @@
             <div class="col-md-10">
                 @*@Html.EditorFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })*@
                 @*<textarea name="Description" class="textarea"></textarea>*@
-                @Html.TextAreaFor(model => model.MoTa, htmlAttributes: new { @class = "form-control", @rows = 5, @cols = 30, @name = "Description" })
+                @Html.TextAreaFor(model => model.MoTa, htmlAttributes: new { @class = "form-control", @rows = 5, @cols = 30, @name = "Description", required = "required" })
                 @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
             </div>
         </div>
