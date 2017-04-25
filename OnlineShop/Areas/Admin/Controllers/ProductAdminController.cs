@@ -1,5 +1,6 @@
 ﻿using ASP_OnlineShopConnection;
 using OnlineShop.Areas.Admin.BUS;
+using OnlineShop.Areas.Admin.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -124,8 +125,16 @@ namespace OnlineShop.Areas.Admin.Controllers
         // GET: Admin/Product/Delete/5
         public ActionResult Delete(int id)
         {
-            var sp = ProductBUS.ProductDetail(id);
-            return View(sp);
+            var info = new ProductInfoAdmin()
+            {
+                SanPhamInfoAdmim = ProductBUS.ProductDetail(id),
+                TenLoaiSanPham = ProductBUS.GetTenLoaiSanPham(id),
+                TenNhaCungCap = ProductBUS.GetTenNhaCungCap(id),
+                TenNhaSanXuat = ProductBUS.GetTenNhaSanXuat(id)
+            };
+            return View(info);
+            //var sp = ProductBUS.ProductDetail(id);
+            //return View(sp);
         }
 
         // POST: Admin/Product/Delete/5

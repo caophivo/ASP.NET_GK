@@ -1,4 +1,5 @@
-﻿@model ASP_OnlineShopConnection.SanPham
+﻿@*@model ASP_OnlineShopConnection.SanPham*@
+@model OnlineShop.Areas.Admin.ViewModels.ProductInfoAdmin
 
 @{
     ViewBag.Title = "Delete";
@@ -18,7 +19,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaSanPham)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.MaSanPham)
         </dd>
 
         <dt>
@@ -27,7 +28,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TenSanPham)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.TenSanPham)
         </dd>
 
         <dt>
@@ -36,7 +37,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.GiaBan)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.GiaBan)
         </dd>
 
         <dt>
@@ -45,7 +46,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SoLuong)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.SoLuong)
         </dd>
 
         <dt>
@@ -54,7 +55,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LuotBinhChon)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.LuotBinhChon)
         </dd>
 
         <dt>
@@ -63,7 +64,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LuotBinhLuan)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.LuotBinhLuan)
         </dd>
 
         <dt>
@@ -72,7 +73,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.LuotXem)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.LuotXem)
         </dd>
 
         <dt>
@@ -81,7 +82,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NgayNhap)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.NgayNhap)
         </dd>
 
         <dt>
@@ -90,7 +91,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.HinhUrl)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.HinhUrl)
         </dd>
 
         <dt>
@@ -99,7 +100,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MoTa)
+            @Html.DisplayFor(model => model.SanPhamInfoAdmim.MoTa)
         </dd>
 
         <dt>
@@ -108,7 +109,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaLoaiSanPham)
+            @Html.DisplayFor(model => model.TenLoaiSanPham)
         </dd>
 
         <dt>
@@ -117,7 +118,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaNhaCungCap)
+            @Html.DisplayFor(model => model.TenNhaCungCap)
         </dd>
 
         <dt>
@@ -126,7 +127,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MaNhaSanXuat)
+            @Html.DisplayFor(model => model.TenNhaSanXuat)
         </dd>
 
         <dt>
@@ -135,7 +136,7 @@
         </dt>
 
         <dd>
-            @if (@Model.DaXoa == 0)
+            @if (@Model.SanPhamInfoAdmim.DaXoa == 0)
             {
                 @Html.DisplayName("Đang kinh doanh")
             }
