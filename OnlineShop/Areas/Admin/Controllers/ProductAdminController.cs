@@ -90,11 +90,21 @@ namespace OnlineShop.Areas.Admin.Controllers
                 //Content("<script language='javascript' type='text/javascript'>alert('Xảy ra lỗi!');</script>");
                 return View(); //đây
         }
-}
+    }
+
+
+        //public ActionResult Edit(int id)
+        //{
+        //    var sp = ProductBUS.ProductDetail(id);
+        //    return View(sp);
+        //}
 
         // GET: Admin/Product/Edit/5
         public ActionResult Edit(int id)
         {
+            ViewBag.MaLoaiSanPham = new SelectList(ProductBUS.GetListCategogy(), "MaLoaiSanPham", "TenLoaiSanPham");
+            ViewBag.MaNhaCungCap = new SelectList(ProductBUS.GetListSupplier(), "MaNhaCungCap", "TenNhaCungCap");
+            ViewBag.MaNhaSanXuat = new SelectList(ProductBUS.GetListManufacturer(), "MaNhaSanXuat", "TenNhaSanXuat");
             var sp = ProductBUS.ProductDetail(id);
             return View(sp);
         }

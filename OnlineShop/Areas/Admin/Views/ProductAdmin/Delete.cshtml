@@ -13,7 +13,8 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.MaSanPham)
+            @*@Html.DisplayNameFor(model => model.MaSanPham)*@
+            @Html.DisplayName("Mã sản phẩm")
         </dt>
 
         <dd>
@@ -21,7 +22,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TenSanPham)
+            @*@Html.DisplayNameFor(model => model.TenSanPham)*@
+            @Html.DisplayName("Tên sản phẩm")
         </dt>
 
         <dd>
@@ -29,7 +31,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.GiaBan)
+            @*@Html.DisplayNameFor(model => model.GiaBan)*@
+            @Html.DisplayName("Giá bán")
         </dt>
 
         <dd>
@@ -37,7 +40,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLuong)
+            @*@Html.DisplayNameFor(model => model.SoLuong)*@
+            @Html.DisplayName("Số lượng")
         </dt>
 
         <dd>
@@ -45,7 +49,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LuotBinhChon)
+            @*@Html.DisplayNameFor(model => model.LuotBinhChon)*@
+            @Html.DisplayName("Lượt bình chọn")
         </dt>
 
         <dd>
@@ -53,7 +58,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LuotBinhLuan)
+            @*@Html.DisplayNameFor(model => model.LuotBinhLuan)*@
+            @Html.DisplayName("Lượt bình luận")
         </dt>
 
         <dd>
@@ -61,7 +67,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.LuotXem)
+            @*@Html.DisplayNameFor(model => model.LuotXem)*@
+            @Html.DisplayName("Lượt xem")
         </dt>
 
         <dd>
@@ -69,7 +76,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NgayNhap)
+            @*@Html.DisplayNameFor(model => model.NgayNhap)*@
+            @Html.DisplayName("Ngày nhập")
         </dt>
 
         <dd>
@@ -77,7 +85,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.HinhUrl)
+            @*@Html.DisplayNameFor(model => model.HinhUrl)*@
+            @Html.DisplayName("Tên hình ảnh")
         </dt>
 
         <dd>
@@ -85,7 +94,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MoTa)
+            @*@Html.DisplayNameFor(model => model.MoTa)*@
+            @Html.DisplayName("Mô tả")
         </dt>
 
         <dd>
@@ -93,7 +103,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MaLoaiSanPham)
+            @*@Html.DisplayNameFor(model => model.MaLoaiSanPham)*@
+            @Html.DisplayName("Loại sản phẩm")
         </dt>
 
         <dd>
@@ -101,7 +112,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MaNhaCungCap)
+            @*@Html.DisplayNameFor(model => model.MaNhaCungCap)*@
+            @Html.DisplayName("Nhà cung cấp")
         </dt>
 
         <dd>
@@ -109,7 +121,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MaNhaSanXuat)
+            @*@Html.DisplayNameFor(model => model.MaNhaSanXuat)*@
+            @Html.DisplayName("Hãng sản xuất")
         </dt>
 
         <dd>
@@ -117,11 +130,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DaXoa)
+            @*@Html.DisplayNameFor(model => model.DaXoa)*@
+            @Html.DisplayName("Tình trạng")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DaXoa)
+            @if (@Model.DaXoa == 0)
+            {
+                @Html.DisplayName("Đang kinh doanh")
+            }
+            else
+            {
+                @Html.DisplayName("Ngừng kinh doanh")
+            }
         </dd>
 
     </dl>
