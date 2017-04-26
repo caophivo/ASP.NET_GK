@@ -110,7 +110,7 @@
             <label class="control-label col-md-2">Hình ảnh</label>
             <div class="col-md-10">
                 @*@Html.EditorFor(model => model.HinhUrl, new { htmlAttributes = new { @class = "form-control" } })*@
-                <input name="imgProduct" type="file" multiple="multiple" size="3" max="3" min="3" required="required" />
+                <input name="imgProduct" type="file" multiple="multiple" size="3" max="3" min="3" />
                 @Html.ValidationMessageFor(model => model.HinhUrl, "", new { @class = "text-danger" })
             </div>
         </div>

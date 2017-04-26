@@ -17,6 +17,11 @@ namespace OnlineShop.Controllers
             return View();
         }
 
+        public ActionResult Type(int id, int page=1)
+        {
+            return View();
+        }
+
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
@@ -93,5 +98,7 @@ namespace OnlineShop.Controllers
                 return View();
             }
         }
+
+       
     }
 }

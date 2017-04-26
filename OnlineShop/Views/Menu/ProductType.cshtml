@@ -4,9 +4,9 @@
     @foreach (var item in Model)
     {
         <li>
-            <a href="women.html">
-                @Html.ActionLink(item.TenLoaiSanPham, "Type", "Products", new { id = item.MaLoaiSanPham }, null)
-            </a>
+              @Html.ActionLink(item.TenLoaiSanPham, "Type", "Product", new { id = item.MaLoaiSanPham }, null)
+               @*<a href="/Product/Type/@item.MaLoaiSanPham">@item.TenLoaiSanPham</a>*@
+              @*@Html.ActionLink(item.TenLoaiSanPham, "Type?id="+item.MaLoaiSanPham.ToString(), "Product", null)*@
         </li>
     }
 </ul>

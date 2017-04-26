@@ -210,13 +210,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\BUS\ProductBUS.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductInfoAdmin.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProductTypeBUS.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\APIProductController.cs" />
+    <Compile Include="Controllers\APIProductTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -556,6 +557,32 @@
     <Content Include="images\pp7.jpg" />
     <Content Include="images\pp8.jpg" />
     <Content Include="images\pp9.jpg" />
+    <Content Include="images\products\1513e876-070b-4120-9ec5-85043732e5ad.jpg" />
+    <Content Include="images\products\34499b86-7360-44db-b912-d6ece197a499.jpg" />
+    <Content Include="images\products\5f243ae1-97d0-4f34-8cca-693874ab7359.jpg" />
+    <Content Include="images\products\85185f93-ffb7-410b-9358-9bb0fe05ba5a.jpg" />
+    <Content Include="images\products\b8c2b844-8016-49d3-83c9-c8f8d8a2274f.jpg" />
+    <Content Include="images\products\cd321194-a40c-463b-8f9d-64cd6f163150.jpg" />
+    <Content Include="images\products\d222a814-f3cf-4710-a312-532b31509d35.jpg" />
+    <Content Include="images\products\d62b0900-b99a-4dfa-b82f-264867cc43b3.jpg" />
+    <Content Include="images\products\d75f9bce-85cc-491b-bb02-ff73f5511366.jpg" />
+    <Content Include="images\products\ip1.jpg" />
+    <Content Include="images\products\ip2.jpg" />
+    <Content Include="images\products\ip3.jpg" />
+    <Content Include="images\product\2d236f21-2207-495e-974c-45d9c48ca1e0.jpg" />
+    <Content Include="images\product\2ebff454-5640-46ba-95d0-55e6fb98d564.jpg" />
+    <Content Include="images\product\3d8971ad-eb32-4092-858d-d955bae98b57.jpg" />
+    <Content Include="images\product\58247679-346e-4e2f-9a7a-3f37cb31825e.jpg" />
+    <Content Include="images\product\7996b82d-7749-48dc-a46b-a709f36a0a4c.jpg" />
+    <Content Include="images\product\81e8e327-f37f-4a19-9a1e-e044a2afa8a0.jpg" />
+    <Content Include="images\product\880d8c53-59b5-4325-806d-e5ed376d6d1a.jpg" />
+    <Content Include="images\product\8b60e794-aa8f-4f19-aa14-41f5b5b33a4f.jpg" />
+    <Content Include="images\product\8e4d31f1-fac8-4108-b92e-26078536358b.jpg" />
+    <Content Include="images\product\d1fc77f0-9ecb-43d4-9809-a405352d02b9.jpg" />
+    <Content Include="images\product\d1fd4846-393e-4e30-8d92-8cf2a1b16257.jpg" />
+    <Content Include="images\product\d8959480-1844-4b11-8a3c-b295231860b8.jpg" />
+    <Content Include="images\product\df0b0253-adde-48b1-b204-e6d35f4e625f.jpg" />
+    <Content Include="images\product\f6958b68-91c9-4def-acfb-bd20ac2d5d9d.jpg" />
     <Content Include="images\rec1.jpg" />
     <Content Include="images\rec2.jpg" />
     <Content Include="images\rec3.jpg" />
@@ -668,7 +695,7 @@
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_MainLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\fonts\fontawesome-webfont.eot" />
     <Content Include="Areas\Admin\fonts\fontawesome-webfont.ttf" />
     <Content Include="Areas\Admin\fonts\fontawesome-webfont.woff" />
@@ -676,10 +703,10 @@
     <Content Include="Areas\Admin\fonts\FontAwesome.otf" />
     <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Areas\Admin\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
     <Content Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="App_Readme\Handlebarsjs_LICENSE" />
     <Content Include="Content\tinymce\js\tinymce\langs\readme.md" />
@@ -749,12 +776,11 @@
     <Content Include="Views\Shared\_ProductTypeMenu.cshtml" />
     <Content Include="Views\Menu\ProductType.cshtml" />
     <Content Include="Views\Menu\Producer.cshtml" />
+    <Content Include="Views\Product\Type.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="images\products\" />
-    <Folder Include="images\product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

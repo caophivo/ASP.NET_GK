@@ -32,7 +32,7 @@
                             <td>@item.SoLuong</td>
                             <td>@item.NgayNhap</td>
                             <td>@item.HinhUrl</td>
-                            <td>@item.MoTa</td>
+                            <td>@Html.Raw(item.MoTa)</td>
                             @if (item.DaXoa == 1)
                             {
                                 <td>Ngừng kinh doanh</td>

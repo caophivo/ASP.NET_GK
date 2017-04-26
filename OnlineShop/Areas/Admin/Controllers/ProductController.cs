@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace OnlineShop.Areas.Admin.Controllers
 {
-    public class ProductAdminController : Controller
+    public class ProductController : Controller
     {
         // GET: Admin/Product
         public ActionResult Index()
@@ -112,6 +112,7 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         // POST: Admin/Product/Edit/5
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(int id, SanPham sp)
         {
             // TODO: Add update logic here

@@ -10,21 +10,28 @@ using System.Web.Http;
 
 namespace OnlineShop.Controllers
 {
-    [RoutePrefix("api/product")]
-    public class APIProductController : ApiController
+    [RoutePrefix("api/product/type")]
+    public class APIProductTypeController : ApiController
     {
+        // GET api/<controller>
+        
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
         // GET api/<controller>
         [Route("")]
         [HttpGet]
-        public Page<SanPham> Get(int page = 1)
+        public Page<SanPham> Get(int id, int page=1)
         {
-            return ProductBUS.ListProduct(page, 4);
+            return ProductBUS.ListProductType(page, 4, id);
         }
 
-        //GET api/<controller>/5
-        //public Page<SanPham> Get(int id, int page = 1)
+        // GET api/<controller>/5
+        //public string Get(int id)
         //{
-        //    return ProductBUS.ListProductType(1, 4, id);
+        //    return "value";
         //}
 
         // POST api/<controller>

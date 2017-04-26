@@ -22,6 +22,12 @@ namespace OnlineShop.BUS
             return db.Page<SanPham>(pageNumber, itemPerPage, "SELECT * FROM SanPham");
         }
 
+        public static Page<SanPham> ListProductType(int pageNumber, int itemPerPage, int id)
+        {
+            var db = new ASP_OnlineShopConnectionDB();
+            return db.Page<SanPham>(pageNumber, itemPerPage, "SELECT * FROM SanPham WHERE MaLoaiSanPham=" + id);
+        }
+
         public static SanPham ProductDetail(int id)
         {
             var db = new ASP_OnlineShopConnectionDB();
