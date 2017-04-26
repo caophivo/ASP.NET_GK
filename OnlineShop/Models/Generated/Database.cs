@@ -26,7 +26,7 @@
 // 
 //     Connection String Name: `ASP_OnlineShopConnection`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `Data Source=DESKTOP-FQMKKNC\VOCAO;Initial Catalog=ASP_OnlineShop;Integrated Security=True`
+//     Connection String:      `Data Source=DESKTOP-FQMKKNC\VOCAO;Initial Catalog=OnlineShop;Integrated Security=True`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -726,54 +726,6 @@ namespace ASP_OnlineShopConnection
 
 
 		[Column] public long? DaXoa { get; set; }
-
-
-
-	}
-
-    
-
-	[TableName("dbo.sysdiagrams")]
-
-
-
-	[PrimaryKey("diagram_id")]
-
-
-
-
-	[ExplicitColumns]
-
-    public partial class sysdiagram : ASP_OnlineShopConnectionDB.Record<sysdiagram>  
-    {
-
-
-
-		[Column] public string name { get; set; }
-
-
-
-
-
-		[Column] public int principal_id { get; set; }
-
-
-
-
-
-		[Column] public int diagram_id { get; set; }
-
-
-
-
-
-		[Column] public int? version { get; set; }
-
-
-
-
-
-		[Column] public byte[] definition { get; set; }
 
 
 

@@ -8,6 +8,7 @@
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
         width: 80%;
+        height: 150px;
         margin: auto;
     }
 </style>
@@ -76,24 +77,6 @@
     </a>
 </div>
 
-@*<div class="banner-agile">
-        <div class="container">
-            <h2>WELCOME TO</h2>
-            <h3>FASHION <span>CLUB</span></h3>
-            <p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
-            <a href="about.html">Read More</a>
-        </div>
-    </div>*@
-
-@*<div class="banner-agile">
-        <div class="container">
-            <h2>WELCOME TO</h2>
-            <h3>FASHION <span>CLUB</span></h3>
-            <p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
-            <a href="about.html">Read More</a>
-        </div>
-    </div>*@
-
 <div class="top-products">
     <div class="container">
         <h3>Top Products</h3>
@@ -121,7 +104,7 @@
     <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
         <a href="/Product/Details/{{maSanPham}}">
             <div class="product-img">
-                <img src="/images/{{hinhUrl}}" alt="" />
+                <img src="/images/product/{{hinhUrl}}" alt="" />
                 <div class="p-mask">
                     <form action="#" method="post">
                         <input type="hidden" name="cmd" value="_cart" />

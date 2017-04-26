@@ -76,35 +76,11 @@
     </a>
 </div>
 
-@*<div class="banner-agile">
-    <div class="container">
-        <h2>WELCOME TO</h2>
-        <h3>FASHION <span>CLUB</span></h3>
-        <p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
-        <a href="about.html">Read More</a>
-    </div>
-</div>*@
-
-@*<div class="banner-agile">
-    <div class="container">
-        <h2>WELCOME TO</h2>
-        <h3>FASHION <span>CLUB</span></h3>
-        <p>Suspendisse sed tellus id libero pretium interdum. Suspendisse potenti. Quisque consectetur elit sit amet vehicula tristique. </p>
-        <a href="about.html">Read More</a>
-    </div>
-</div>*@
-
 <div class="top-products">
     <div class="container">
         <h3>Top Products</h3>
         <div class="sap_tabs">
             <div id="horizontalTab">
-                @*<ul class="resp-tabs-list">
-                        <li class="resp-tab-item"><span>Men's</span></li>
-                        <li class="resp-tab-item"><span>Women</span></li>
-                        <li class="resp-tab-item"><span>Handbags</span></li>
-                        <li class="resp-tab-item"><span>Cosmetics</span></li>
-                    </ul>*@
                 @Html.Partial("_ProductTypeMenu", OnlineShop.BUS.ProductTypeBUS.ListProductType())
                 <div class="clearfix"> </div>
                 <div class="resp-tabs-container">
@@ -121,7 +97,7 @@
     <div class="col-md-3 top-product-grids tp1 animated wow slideInUp" data-wow-delay=".5s">
         <a href="/Product/Details/{{maSanPham}}">
             <div class="product-img">
-                <img src="/images/{{hinhUrl}}" alt="" />
+                <img src="/images/product/{{hinhUrl}}" alt="" />
                 <div class="p-mask">
                     <form action="#" method="post">
                         <input type="hidden" name="cmd" value="_cart" />
