@@ -39,10 +39,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <a href="~/"><img src="~/images/logo2.png" alt=" " /><h1>MOBILE<span>SHOP</span></h1></a>
             </div>
             <div class="col-md-6 phone-w3l">
-                <ul>
+                @*<ul>
                     <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></li>
                     <li>0987793481</li>
-                </ul>
+                </ul>*@
+                @Html.Partial("_LoginPartial")
             </div>
             <div class="clearfix"></div>
         </div>
@@ -1038,6 +1039,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     </script>
     <!-- //cart-js -->
+    @RenderSection("scripts", required: false)
 </body>
 </html>
 

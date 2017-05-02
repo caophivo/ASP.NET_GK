@@ -21,7 +21,7 @@ namespace OnlineShop.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ASP_OnlineShopConnection", throwIfV1Schema: false)
         {
         }
 
