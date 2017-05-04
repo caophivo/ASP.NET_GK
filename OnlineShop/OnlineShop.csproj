@@ -716,6 +716,7 @@
     <Content Include="Content\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="Content\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Content\tinymce\js\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Areas\Admin\Views\Shared\_LoginPartialAdmin.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\handlebars.amd.js" />
     <Content Include="Scripts\handlebars.amd.min.js" />
