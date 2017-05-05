@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<ASP_OnlineShopConnection.NhaSanXuat>
-@{ Layout = null; }
-<ul class="multi-column-dropdown">
+
+<ul class="resp-tabs-list">
     @foreach (var item in Model)
     {
-        <li>
-            <a href="women.html">
+        <li class="resp-tab-item">
+            <span>
                 @Html.ActionLink(item.TenNhaSanXuat, "Producer", "Product", new { id = item.MaNhaSanXuat }, null)
-            </a>
+            </span>
         </li>
-
     }
 </ul>

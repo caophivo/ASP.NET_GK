@@ -17,7 +17,12 @@ namespace OnlineShop.Controllers
             return View();
         }
 
-        public ActionResult Type(int id, int page=1)
+        public ActionResult Type(int id, int page = 1)
+        {
+            return View();
+        }
+
+        public ActionResult Producer(int id, int page = 1)
         {
             return View();
         }
