@@ -137,33 +137,259 @@ namespace ASP_OnlineShopConnection
 
     
 
-	[TableName("dbo.BinhChon")]
+	[TableName("dbo.__MigrationHistory")]
 
 
 
-	[PrimaryKey("MaThanhVien", AutoIncrement=false)]
+	[PrimaryKey("MigrationId", AutoIncrement=false)]
 
 
 	[ExplicitColumns]
 
-    public partial class BinhChon : ASP_OnlineShopConnectionDB.Record<BinhChon>  
+    public partial class __MigrationHistory : ASP_OnlineShopConnectionDB.Record<__MigrationHistory>  
     {
 
 
 
-		[Column] public int MaThanhVien { get; set; }
+		[Column] public string MigrationId { get; set; }
 
 
 
 
 
-		[Column] public int MaSanPham { get; set; }
+		[Column] public string ContextKey { get; set; }
 
 
 
 
 
-		[Column] public string NoiDung { get; set; }
+		[Column] public byte[] Model { get; set; }
+
+
+
+
+
+		[Column] public string ProductVersion { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetRoles")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetRole : ASP_OnlineShopConnectionDB.Record<AspNetRole>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserClaims")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserClaim : ASP_OnlineShopConnectionDB.Record<AspNetUserClaim>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string ClaimType { get; set; }
+
+
+
+
+
+		[Column] public string ClaimValue { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserLogins")]
+
+
+
+	[PrimaryKey("LoginProvider", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserLogin : ASP_OnlineShopConnectionDB.Record<AspNetUserLogin>  
+    {
+
+
+
+		[Column] public string LoginProvider { get; set; }
+
+
+
+
+
+		[Column] public string ProviderKey { get; set; }
+
+
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUserRoles")]
+
+
+
+	[PrimaryKey("UserId", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUserRole : ASP_OnlineShopConnectionDB.Record<AspNetUserRole>  
+    {
+
+
+
+		[Column] public string UserId { get; set; }
+
+
+
+
+
+		[Column] public string RoleId { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.AspNetUsers")]
+
+
+
+	[PrimaryKey("Id", AutoIncrement=false)]
+
+
+	[ExplicitColumns]
+
+    public partial class AspNetUser : ASP_OnlineShopConnectionDB.Record<AspNetUser>  
+    {
+
+
+
+		[Column] public string Id { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public bool EmailConfirmed { get; set; }
+
+
+
+
+
+		[Column] public string PasswordHash { get; set; }
+
+
+
+
+
+		[Column] public string SecurityStamp { get; set; }
+
+
+
+
+
+		[Column] public string PhoneNumber { get; set; }
+
+
+
+
+
+		[Column] public bool PhoneNumberConfirmed { get; set; }
+
+
+
+
+
+		[Column] public bool TwoFactorEnabled { get; set; }
+
+
+
+
+
+		[Column] public DateTime? LockoutEndDateUtc { get; set; }
+
+
+
+
+
+		[Column] public bool LockoutEnabled { get; set; }
+
+
+
+
+
+		[Column] public int AccessFailedCount { get; set; }
+
+
+
+
+
+		[Column] public string UserName { get; set; }
 
 
 
@@ -199,13 +425,31 @@ namespace ASP_OnlineShopConnection
 
 
 
-		[Column] public int? MaThanhVien { get; set; }
-
-
-
-
-
 		[Column] public int? MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public string MaTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public string TenTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public int? TinhTrang { get; set; }
+
+
+
+
+
+		[Column] public DateTime? Ngay { get; set; }
 
 
 
@@ -469,36 +713,6 @@ namespace ASP_OnlineShopConnection
 
     
 
-	[TableName("dbo.LoaiThanhVien")]
-
-
-
-	[PrimaryKey("MaLoai")]
-
-
-
-
-	[ExplicitColumns]
-
-    public partial class LoaiThanhVien : ASP_OnlineShopConnectionDB.Record<LoaiThanhVien>  
-    {
-
-
-
-		[Column] public int MaLoai { get; set; }
-
-
-
-
-
-		[Column] public string TenLoai { get; set; }
-
-
-
-	}
-
-    
-
 	[TableName("dbo.NhaCungCap")]
 
 
@@ -733,65 +947,47 @@ namespace ASP_OnlineShopConnection
 
     
 
-	[TableName("dbo.ThanhVien")]
+	[TableName("dbo.sysdiagrams")]
 
 
 
-	[PrimaryKey("MaThanhVien")]
+	[PrimaryKey("diagram_id")]
 
 
 
 
 	[ExplicitColumns]
 
-    public partial class ThanhVien : ASP_OnlineShopConnectionDB.Record<ThanhVien>  
+    public partial class sysdiagram : ASP_OnlineShopConnectionDB.Record<sysdiagram>  
     {
 
 
 
-		[Column] public int MaThanhVien { get; set; }
+		[Column] public string name { get; set; }
 
 
 
 
 
-		[Column] public string TaiKhoan { get; set; }
+		[Column] public int principal_id { get; set; }
 
 
 
 
 
-		[Column] public string MatKhau { get; set; }
+		[Column] public int diagram_id { get; set; }
 
 
 
 
 
-		[Column] public string HoTen { get; set; }
+		[Column] public int? version { get; set; }
 
 
 
 
 
-		[Column] public string DiaChi { get; set; }
-
-
-
-
-
-		[Column] public string Email { get; set; }
-
-
-
-
-
-		[Column] public int? MaLoaiThanhVien { get; set; }
-
-
-
-
-
-		[Column] public long? DaXoa { get; set; }
+		[Column] public byte[] definition { get; set; }
 
 
 

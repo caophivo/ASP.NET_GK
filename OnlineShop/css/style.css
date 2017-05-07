@@ -1662,10 +1662,17 @@ p.single-price-text {
 	line-height: 1.8em;
 	font-size: 1em;
 }
+
+.collpse.tabs .panel-body > textarea{
+	width:500px;
+    color:red;
+}
+
 .collpse.tabs .panel-default > .panel-heading {
     padding: 0;
     background: #37a1f3;
-} 
+}
+
 .pa_italic span.fa-arrow{
     display: none;
 }

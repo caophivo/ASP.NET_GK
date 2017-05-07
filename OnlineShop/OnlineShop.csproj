@@ -213,12 +213,14 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductInfoAdmin.cs" />
+    <Compile Include="BUS\BinhLuanBUS.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProductTypeBUS.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\APIProducerController.cs" />
     <Compile Include="Controllers\APIProductController.cs" />
     <Compile Include="Controllers\APIProductTypeController.cs" />
+    <Compile Include="Controllers\BinhLuanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
@@ -781,6 +783,7 @@
     <Content Include="Views\Product\Type.cshtml" />
     <Content Include="Views\Product\Producer.cshtml" />
     <Content Include="Views\Shared\_ProducerMenu.cshtml" />
+    <Content Include="Views\BinhLuan\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
