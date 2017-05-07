@@ -8,7 +8,7 @@ namespace OnlineShop.BUS
 {
     public class BinhLuanBUS
     {
-        public static void Them(int MaSanPham, string MaTaiKhoan, string NoiDung, string TenTaiKhoan)
+        public static void Them(string NoiDungBinhLuan, int? MaSanPham, string MaTaiKhoan, string TenTaiKhoan)
         {
             using (var db = new ASP_OnlineShopConnectionDB())
             {
@@ -17,7 +17,7 @@ namespace OnlineShop.BUS
                 //bl.MaTaiKhoan = MaTaiKhoan;
                 //bl.NoiDungBinhLuan = NoiDung;
                 //bl.MaThanhVien = 2;
-                db.Execute("INSERT INTO [dbo].[BinhLuan] ([NoiDungBinhLuan],[MaSanPham],[MaTaiKhoan],[TenTaiKhoan]) VALUES(@0,@1,@2,@3)", NoiDung, MaSanPham, MaTaiKhoan, TenTaiKhoan);
+                db.Execute("INSERT INTO [dbo].[BinhLuan] ([NoiDungBinhLuan], [MaSanPham],[MaTaiKhoan],[TenTaiKhoan]) VALUES(@0,@1,@2,@3)", NoiDungBinhLuan, MaSanPham, MaTaiKhoan, TenTaiKhoan);
             }
         }
 
@@ -25,7 +25,7 @@ namespace OnlineShop.BUS
         {
             using (var db = new ASP_OnlineShopConnectionDB())
             {
-                return db.Query<BinhLuan>("select * from BinhLuan where MaSanPham = @0", MaSanPham);
+                return db.Query<BinhLuan>("select * from BinhLuan where MaSanPham = @0 order by Ngay desc", MaSanPham);
             }
         }
     }

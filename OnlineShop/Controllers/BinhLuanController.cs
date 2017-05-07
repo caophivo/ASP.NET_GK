@@ -12,13 +12,14 @@ namespace OnlineShop.Controllers
     {
         // GET: BinhLuan
         [Authorize]
-        public ActionResult Create(int MaSanPham=0, string NoiDung="")
+        [ValidateInput(false)]
+        public ActionResult Create(int MaSanPham=0, string NoiDungBinhLuan="")
         {
             if(MaSanPham == 0)
             {
                 return Redirect("/");
             }
-            BinhLuanBUS.Them(MaSanPham, User.Identity.GetUserId(), User.Identity.GetUserName(), NoiDung);
+            BinhLuanBUS.Them(NoiDungBinhLuan, MaSanPham, User.Identity.GetUserId(), User.Identity.Name);
             return RedirectToAction("Details", "Product", new { id = MaSanPham });
         }
 

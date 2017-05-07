@@ -8,13 +8,17 @@
 {
     using (Html.BeginForm("Create", "BinhLuan", FormMethod.Post))
     {
-        @Html.AntiForgeryToken()
-        @*@Html.TextArea("NoiDung")*@
+        @*@Html.AntiForgeryToken()
         @Html.Hidden("MaSanPham", (int)ViewBag.MaSanPham)
         <textarea class="form-control" rows="5" id="comment" name="NoiDung"></textarea>
-        <input type="submit" value="Đăng" />
+        <input type="submit" value="Đăng" />*@
+
+        //Ajax
+        <textarea class="form-control" id="comment-content"></textarea>
+        <input value="Đăng" type="button" onclick="postComment()" />
     }
-}else
+}
+else
 {
     <div>Vui lòng <a href="/Account/Login">Đăng nhập</a> để bình luận</div>
 }
@@ -32,4 +36,5 @@
         <hr />
     }
 </div>
+
 

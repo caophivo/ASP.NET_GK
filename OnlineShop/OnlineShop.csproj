@@ -217,6 +217,7 @@
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProductTypeBUS.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\APIBinhLuanController.cs" />
     <Compile Include="Controllers\APIProducerController.cs" />
     <Compile Include="Controllers\APIProductController.cs" />
     <Compile Include="Controllers\APIProductTypeController.cs" />
