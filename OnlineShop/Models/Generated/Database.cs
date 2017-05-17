@@ -28,7 +28,7 @@
 //     Provider:               `System.Data.SqlClient`
 //     Connection String:      `Data Source=DESKTOP-FQMKKNC\VOCAO;Initial Catalog=OnlineShop;Integrated Security=True`
 //     Schema:                 ``
-//     Include Views:          `False`
+//     Include Views:          `True`
 
 
 
@@ -499,6 +499,54 @@ namespace ASP_OnlineShopConnection
 
     
 
+	[TableName("dbo.ChiTietGioHang")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class ChiTietGioHang : ASP_OnlineShopConnectionDB.Record<ChiTietGioHang>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public int SoLuong { get; set; }
+
+
+
+
+
+		[Column] public int DonGia { get; set; }
+
+
+
+
+
+		[Column] public int MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public string MaTaiKhoan { get; set; }
+
+
+
+	}
+
+    
+
 	[TableName("dbo.ChiTietPhieuNhap")]
 
 
@@ -586,6 +634,48 @@ namespace ASP_OnlineShopConnection
 
 
 		[Column] public int? MaKhachHang { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.GioHang")]
+
+
+
+	[PrimaryKey("Id")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class GioHang : ASP_OnlineShopConnectionDB.Record<GioHang>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string MaTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public int MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public int SoLuong { get; set; }
 
 
 
@@ -988,6 +1078,68 @@ namespace ASP_OnlineShopConnection
 
 
 		[Column] public byte[] definition { get; set; }
+
+
+
+	}
+
+    
+
+	[TableName("dbo.V_GioHang")]
+
+
+
+
+	[ExplicitColumns]
+
+    public partial class V_GioHang : ASP_OnlineShopConnectionDB.Record<V_GioHang>  
+    {
+
+
+
+		[Column] public int Id { get; set; }
+
+
+
+
+
+		[Column] public string MaTaiKhoan { get; set; }
+
+
+
+
+
+		[Column] public int MaSanPham { get; set; }
+
+
+
+
+
+		[Column] public int SoLuong { get; set; }
+
+
+
+
+
+		[Column] public string TenSanPham { get; set; }
+
+
+
+
+
+		[Column] public string HinhUrl { get; set; }
+
+
+
+
+
+		[Column] public string MoTa { get; set; }
+
+
+
+
+
+		[Column] public int? GiaBan { get; set; }
 
 
 

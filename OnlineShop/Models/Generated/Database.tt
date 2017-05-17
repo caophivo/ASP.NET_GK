@@ -1,7 +1,7 @@
 <#@ include file="PetaPoco.Core.ttinclude" #>
 <#
 	// Settings
-    ConnectionStringName = "ASP_OnlineShopConnection";			// Uses last connection string in config if not specified
+    ConnectionStringName = "ASP_OnlineShopConnection";		// Uses last connection string in config if not specified
     Namespace = "";
     RepoName = "";
     GenerateOperations = true;
@@ -12,7 +12,7 @@
 	TrackModifiedColumns = false;
 	ExplicitColumns = true;
 	ExcludePrefix = new string[] {}; // Exclude tables by prefix.
-
+	IncludeViews = true;
     // Read schema
 	var tables = LoadTables();
 

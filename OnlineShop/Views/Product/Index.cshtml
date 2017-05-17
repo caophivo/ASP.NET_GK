@@ -74,13 +74,22 @@
             <div class="product-img">
                 <img src="/images/product/{{hinhUrl}}" alt="" />
                 <div class="p-mask">
-                    <form action="#" method="post">
+                    @*<form action="#" method="post">
                         <input type="hidden" name="cmd" value="_cart" />
                         <input type="hidden" name="add" value="1" />
                         <input type="hidden" name="w3ls1_item" value="Formal shoes" />
                         <input type="hidden" name="amount" value="220.00" />
-                        <button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
-                    </form>
+                        <button type="submit" class="w3ls-cart pw3ls-cart">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>Add to cart
+                        </button>
+                    </form>*@
+                    @using (Html.BeginForm("AddToCart", "ProductCart", FormMethod.Get))
+                    {
+                        <input type="hidden" name="maSanPham" value="{{maSanPham}}"/>
+                        <button type="submit" class="w3ls-cart pw3ls-cart">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>Add to cart
+                        </button>
+                    }
                 </div>
             </div>
         </a>
